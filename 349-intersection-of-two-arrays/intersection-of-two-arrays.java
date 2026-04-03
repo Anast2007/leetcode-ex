@@ -11,8 +11,7 @@ class Solution {
         int[] result=new int[res.size()];
         int k=0;
         for(int num:res){
-            result[k]=num;
-            k++;
+            result[k++]=num;
         }
         return result;
     }
