@@ -1,10 +1,10 @@
 class Solution {
     public int countAsterisks(String s) {
         int count=0;
-        boolean res=false;
-        for(char c:s.toCharArray()){
-            if(c=='|') res=!res;
-            else if(c=='*' && !res) count++;
+        int pipe=0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i) == '|') pipe++;
+            if(s.charAt(i) == '*' && pipe % 2 == 0) count++;
         }
         return count;
     }
