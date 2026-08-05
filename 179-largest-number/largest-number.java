@@ -6,10 +6,13 @@ class Solution {
         }
         Arrays.sort(arr, (a, b) -> (b + a).compareTo(a + b));
         if(arr[0].equals("0")) return "0";
-        StringBuilder str = new StringBuilder();
+        //StringBuilder str = new StringBuilder();
+        String ans = "";
         for(String a : arr){
-            str.append(a);
+           // str.append(a);
+           ans += a;
         }
-        return str.toString();
+       // return str.toString();
+       return ans;
     }
 }
