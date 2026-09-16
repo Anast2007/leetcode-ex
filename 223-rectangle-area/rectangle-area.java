@@ -3,6 +3,9 @@ class Solution {
         int area1 = (ax2 - ax1) * (ay2 - ay1);
         int area2 = (bx2 - bx1) * (by2 - by1);
         int width = Math.max(0, Math.min(ax2, bx2) - Math.max(ax1, bx1));
-        int height = Math.max(0, Math.min(ay2, by2) - Math.max(ay1, by1));return area1 + area2 - width * height;
+        int height = Math.max(0, Math.min(ay2, by2) - Math.max(ay1, by1));
+        int ans = 0;
+        if(width > 0 && height > 0) ans = width * height;
+        return area1 + area2 - ans;
     }
 }
