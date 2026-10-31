@@ -24,7 +24,7 @@ class Solution {
             cur.next = prev;
             prev = cur;
             cur = next;
-        }
+        } 
         head.next = reverseKGroup(cur, k);
         return prev;
     }
